@@ -1,0 +1,92 @@
+Connecting
+
+CREATE SCHEMA `connectus` ;
+
+
+Creating Columns
+
+CREATE TABLE `connectus`.`connect1` (
+  `rollno` INT NOT NULL,
+  `password` VARCHAR(18) NOT NULL DEFAULT 'Us',
+  `name` VARCHAR(30) NULL,
+  `city` VARCHAR(20) NULL,
+  `edu` VARCHAR(45) NULL,
+  `home` VARCHAR(25) NULL,
+  `sex` VARCHAR(6) NULL,
+  `dob` DATE NULL,
+  `skills` VARCHAR(140) NULL,
+  `ph` VARCHAR(12) NULL,
+  `exp` VARCHAR(256) NULL,
+  PRIMARY KEY (`rollno`));
+
+
+Quere Input (V.vIMP)
+
+INSERT INTO `connectus`.`connect1` (`rollno`, `password`, `name`, `city`, `edu`, `home`, `sex`, `dob`, `skills`, `ph`, `exp`) VALUES ('201501083', 'hahaha', 'prasann', 'ahemdabad', 'BTech', 'chicago', 'Male', '1997-01-02', 'Basketball', '9427861744', 'all');
+
+
+Running Basic Query
+
+SELECT *
+FROM `connectus`.`connect1`;
+
+
+
+Adding Column to the Table
+
+ALTER TABLE `connectus`.`connect1` 
+ADD COLUMN `post` VARCHAR(600) NULL AFTER `exp`;
+
+
+
+Chaning a Column name
+
+
+ALTER TABLE `connectus`.`connect1` 
+CHANGE COLUMN `sex` `sex` CHAR(1) NULL DEFAULT NULL ;
+
+
+
+Cheaking the Statement into EClipse
+
+
+INSERT INTO `demo`.`demotable1` VALUES ('7777', 'uuuuuuu', '88888');
+
+
+"		INSERT INTO demotable1 VALUES( '~', '~', '~')		";
+
+"INSERT INTO `demo`.`demotable1` VALUES(" + newStudent.getId() + ", '" + newStudent.getName() + "', '" + newStudent.getPhone() + "')"
+
+
+INSERT INTO `connectus`.`connect1` VALUES ('201501082', 'hehehe', 'pujan', 'ahemdabad', 'Btech', 'kkn', 'F', '1997-08-25', 'nothing', '9898989898', 'none', 'thisisthepostt');
+
+
+
+
+"	INSERT INTO `connectus`.`connect1` VALUES ('201501082', 'hehehe', 'pujan', 'ahemdabad', 'Btech', 'kkn', 'F', '1997-08-25', 'nothing', '9898989898', 'none', 'thisisthepostt')	";
+
+
+
+
+
+
+
+
+Updating NOW
+
+
+
+UPDATE `connectus`.`connect1` SET `name`='PujanP', `city`='Ahemdabad City', `edu`='Btech CS', `home`='kk', `sex`='M', `dob`='1997-07-25', `skills`='NONE', `ph`='9898989895', `exp`='NOPE' WHERE `rollno`='201501082';
+
+
+
+
+Search Query
+
+SELECT *
+FROM `connectus`.`connect1` WHERE `rollno` = 201501063;
+
+
+
+"	SELECT *
+FROM `connectus`.`connect1` WHERE `rollno` = '"+		+"';		";
